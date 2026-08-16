@@ -20,6 +20,8 @@ services:
     container_name: insightiq-frontend
     depends_on:
       - backend
+    environment:
+      BACKEND_URL: http://backend:8000
     ports:
       - "8080:80"
     restart: unless-stopped
